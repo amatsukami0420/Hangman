@@ -96,9 +96,9 @@ We include a small helper program to tidy up the dictionary:
 - What it does:
   - Reads `src\words.txt`
   - Trims whitespace, sorts case-insensitively
-  - Removes duplicates while preserving one-per-line format
+  - Removes duplicates while preserving a one-per-line format
   - Writes the cleaned list back to `src\words.txt`
-- How to run (from project root):
+- How to run (from the project root):
   ```
   javac -d out src\CleanDictionary.java
   java -cp out CleanDictionary
@@ -106,7 +106,7 @@ We include a small helper program to tidy up the dictionary:
 
 ## Changelog
 
-- 2025-10-19: Expanded the words dictionary with 80+ advanced and challenging entries (e.g., dermatoglyphics, electroencephalograph, autochthonous, synecdoche, metonymy, catachresis, widdershins, brouhaha, flibbertigibbet, cattywampus). Maintained lowercase, one-per-line format. Added documentation for the CleanDictionary utility and updated the project structure.
+- 2025-10-19: Expanded the word dictionary with 80+ advanced and challenging entries (e.g., dermatoglyphics, electroencephalograph, autochthonous, synecdoche, metonymy, catachresis, widdershins, brouhaha, flibbertigibbet, cattywampus). Maintained lowercase, one-per-line format. Added documentation for the CleanDictionary utility and updated the project structure.
 
 ## Troubleshooting
 
