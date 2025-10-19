@@ -38,6 +38,7 @@ public class Hangman {
         System.out.println("Welcome to Java Hangman!");
         System.out.println(separator);
         int first=1;
+        String stat = "";
         while (wrongGuesses < 6) {
             switch (first){
                 case 0 -> {
@@ -47,6 +48,7 @@ public class Hangman {
                 }
                 case 1 -> first=0;
             }
+            System.out.println(stat);
             System.out.println(getHangmanArt(wrongGuesses));
             System.out.print("Word: ");
             for (char c: wordState) {
@@ -56,7 +58,7 @@ public class Hangman {
             System.out.print("Guess a letter: ");
             char guess = scanner.next().toLowerCase().charAt(0);
             if (word.indexOf(guess) != -1) {
-                System.out.println("Correct Guess!\n");
+                stat = "Correct Guess!\n";
                 for (int i = 0; i < word.length(); i++) {
                     if (word.charAt(i) == guess) {
                         wordState.set(i, guess);
@@ -64,7 +66,7 @@ public class Hangman {
                 }
             }
             else {
-                System.out.println("Wrong Guess!\n");
+                stat = "Wrong Guess!\n";
                 wrongGuesses++;
             }
             if (!wordState.contains('_')) {

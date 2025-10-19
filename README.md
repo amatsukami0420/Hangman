@@ -1,3 +1,4 @@
+
 # Java Hangman Game
 
 A simple command-line implementation of the classic Hangman game written in Java.
@@ -17,7 +18,7 @@ This game randomly selects a word from a text file and allows players to guess l
 Hangman.iml
 README.md
 out\production\Hangman\Hangman.class
-out\production\Hangman\words.txt
+src\CleanDictionary.java
 src\Hangman.java
 src\words.txt
 ```
@@ -30,7 +31,7 @@ The current code reads the words.txt file using an absolute path:
 C:\\Users\\hp\\OneDrive\\Documents\\Java Programs\\Hangman\\src\\words.txt
 ```
 
-If your environment differs, update the `filePath` string near the top of `src\\Hangman.java` or move your `words.txt` to that exact location.
+If your environment differs, update the `filePath` string near the top of `src\Hangman.java` or move your `words.txt` to that exact location.
 
 Tip: To make it portable, you can change the code to use a relative path like `src\\words.txt`.
 
@@ -84,8 +85,28 @@ Wrong Guess!
 
 ## Customizing the Words List
 
-- Edit `src\\words.txt` and put one word per line.
+- Edit `src\words.txt` and put one word per line.
 - Avoid spaces and punctuation; only letters are recommended.
+
+## Utility: CleanDictionary
+
+We include a small helper program to tidy up the dictionary:
+
+- Location: `src\CleanDictionary.java`
+- What it does:
+  - Reads `src\words.txt`
+  - Trims whitespace, sorts case-insensitively
+  - Removes duplicates while preserving one-per-line format
+  - Writes the cleaned list back to `src\words.txt`
+- How to run (from project root):
+  ```
+  javac -d out src\CleanDictionary.java
+  java -cp out CleanDictionary
+  ```
+
+## Changelog
+
+- 2025-10-19: Expanded the words dictionary with 80+ advanced and challenging entries (e.g., dermatoglyphics, electroencephalograph, autochthonous, synecdoche, metonymy, catachresis, widdershins, brouhaha, flibbertigibbet, cattywampus). Maintained lowercase, one-per-line format. Added documentation for the CleanDictionary utility and updated the project structure.
 
 ## Troubleshooting
 
