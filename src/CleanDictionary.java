@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.ArrayList;
-
 public class CleanDictionary {
     public static void main(String[] args) {
         String filePath = "src\\words.txt";
@@ -11,12 +10,10 @@ public class CleanDictionary {
                 dictionary.add(line.trim());
             }
         }
-        catch (
-                FileNotFoundException e){
+        catch (FileNotFoundException e){
             System.out.println("File not found!");
         }
-        catch (
-                IOException e){
+        catch (IOException e){
             System.out.println("Error reading file!");
         }
         catch (Exception e){
@@ -29,9 +26,7 @@ public class CleanDictionary {
                 listWithoutDuplicates.add(element);
             }
         }
-        String filePath1 = "src\\words.txt";
-        listWithoutDuplicates.sort(String::compareToIgnoreCase);
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath1))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             for (String item : listWithoutDuplicates) {
                 writer.write(item);
                 writer.newLine();
