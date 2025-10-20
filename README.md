@@ -25,15 +25,14 @@ src\words.txt
 
 ## Setup
 
-The current code reads the words.txt file using an absolute path:
+The code reads the words.txt file using a relative path:
 
 ```
-C:\\Users\\hp\\OneDrive\\Documents\\Java Programs\\Hangman\\src\\words.txt
+src\\words.txt
 ```
 
 If your environment differs, update the `filePath` string near the top of `src\Hangman.java` or move your `words.txt` to that exact location.
 
-Tip: To make it portable, you can change the code to use a relative path like `src\\words.txt`.
 
 ## Build and Run (Windows PowerShell)
 
