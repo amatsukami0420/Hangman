@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Hangman {
     public static void main(String[] args) {
-        String filePath = "C:\\Users\\hp\\OneDrive\\Documents\\Java Programs\\Hangman\\src\\words.txt";
+        String filePath = "src\\words.txt";
         ArrayList<String> words= new ArrayList<>();
         try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
             String line;
